@@ -125,8 +125,7 @@ SELECT *
 SELECT o.full_name, COUNT(*)
   FROM owners o
   LEFT JOIN animals a
-  ON o.id =  l.a.owner_id
+  ON o.id =  a.owner_id
   GROUP BY o.full_name
   ORDER BY COUNT DESC
   LIMIT 1;
-  
